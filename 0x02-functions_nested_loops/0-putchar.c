@@ -1,24 +1,21 @@
-#include <stdio.h>
-#include <string.h>
-#include <main.h>
-#include "./_putchar.c"
+#include "_putchar.c"
 
 /**
-* main - _putchar
-*
-* Return: Always (0)
-*
-**/
+ * main - _putchar
+ *
+ * Return: Always 0
+ */
 
 int main(void)
 {
 	char *c = "_putchar";
-	int ln = strlen(c), i;
 
-	for (i = 0; i <= ln; i++)
+	while (*c)
 	{
-		_putchar(c[i]);
+		_putchar(*c);
+		c++;
 	}
+	_putchar('\n');
 
 	return (0);
 }
