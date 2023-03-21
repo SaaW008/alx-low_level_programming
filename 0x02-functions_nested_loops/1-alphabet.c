@@ -7,7 +7,7 @@
  * on error, -1 is returned, and error is set appropriately.
  */
 
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	int i = 97;
 
@@ -17,5 +17,4 @@ int print_alphabet(void)
 	}
 	_putchar('\n');
 
-	return (0);
 }
