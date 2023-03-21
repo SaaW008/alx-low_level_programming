@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - alphabet lower case as string x10 and new line
+ * print_alphabet_x10 - alphabet lower case as string x10 and new line
  *
  * Return: on success 1
  * on error, -1 is returned, and error is set appropriately.
