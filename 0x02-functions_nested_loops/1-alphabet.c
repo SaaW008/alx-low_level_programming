@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * main - _putchar
+ * main - alphabet
  *
  * Return: Always 0
  */
 
-int main(void)
+int print_alphabet(void)
 {
 	char *c = "_putchar";
+	int i = 97;
 
-	while (*c)
+	for (i; ; <= 122; i++)
 	{
-		_putchar(*c);
-		c++;
+		_putchar((i+'0'));
 	}
 	_putchar('\n');
 
