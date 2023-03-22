@@ -2,7 +2,7 @@
 
 /**
  * _islower - lower case checker
- *
+ * @c: character to 
  * Return: on success 1
  * on error, -1 is returned, and error is set appropriately.
  */
