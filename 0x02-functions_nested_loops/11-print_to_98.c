@@ -3,7 +3,7 @@
 
 /**
  * print_to_98 - from n to 98 
- *
+ * @n: inputed number
  * Return: always 0
  */
 
