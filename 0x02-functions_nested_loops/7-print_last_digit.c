@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - prints the last digit of a number
- *
+ * @nld: to test
  * Return: on success 1
  * on error, -1 is returned, and error is set appropriately.
  */
