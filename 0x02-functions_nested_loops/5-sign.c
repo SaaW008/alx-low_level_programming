@@ -2,7 +2,7 @@
 
 /**
  * print_sign - the sign of a number
- *
+ * @n: number to test
  * Return: on success 1
  * on error, -1 is returned, and error is set appropriately.
  */
