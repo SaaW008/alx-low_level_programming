@@ -11,7 +11,7 @@ int _strlen(char *s)
 {
 	int l;
 
-	l = unsigned int(strlen(s));
+	l = (unsigned int(strlen(s)));
 	return (l);
 
 }
