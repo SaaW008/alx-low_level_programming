@@ -1,4 +1,5 @@
-#include <sdtio.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
  * print_listint - a function that prints all the elements of a listint_t list
@@ -6,7 +7,13 @@
  * Return: size_t of counted items
  */
 
-ize_t print_listint(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
-
+	size_t i = 0;
+	while (h->next != NULL )
+	{
+		printf("%d\n", h->n);
+		i++;
+	}
+	return i;
 }
