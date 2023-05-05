@@ -9,11 +9,11 @@
 
 void print_binary(unsigned long int n)
 {
-	int bin = 0, base = 1;
+	unsigned long int bin = 0, base = 1;
 
 	while (n > 0)
 	{
-		bin += (n % 2) * base;
+		bin = bin + (n % 2) * base;
 		n /= 2;
 		base *= 10;
 	}
