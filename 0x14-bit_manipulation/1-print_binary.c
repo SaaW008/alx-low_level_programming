@@ -9,7 +9,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int bin = 0, base = 1;
+	unsigned long int bin = 0, base = 1, reversed = 0;
 
 	while (n > 0)
 	{
@@ -25,8 +25,13 @@ void print_binary(unsigned long int n)
 	{
 		while (bin > 0)
 		{
-			putchar(bin % 10 + '0');
+			reversed = reversed * 10 + bin % 10;
 			bin /= 10;
+		}
+		while (reversed > 0)
+		{
+			putchar(reversed % 10 + '0');
+			reversed /= 10;
 		}
 	}
 }
