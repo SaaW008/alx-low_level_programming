@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unit - convert a const binary to decimal form
+ * binary_to_uint - convert a const binary to decimal form
  * @b: pointer to binary char
  *
  * Return: On success decimal form.
