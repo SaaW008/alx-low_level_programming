@@ -9,15 +9,24 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	int bin = 0, base = 1;
+
+	while (n > 0)
 	{
-		_putchar('0');
-		return;
+		bin += (n % 2) * base;
+		n /= 2;
+		base *= 10;
 	}
-	if (n < 1)
-		return;
-	if (n & 1)
-		_putchar('1');
+	if (bin == 0)
+	{
+		putchar('0');
+	}
 	else
-		_putchar('0');
+	{
+		while (bin > 0)
+		{
+			putchar(bin % 10 + '0');
+			bin /= 10;
+		}
+	}
 }
