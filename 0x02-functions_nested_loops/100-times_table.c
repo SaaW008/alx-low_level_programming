@@ -63,6 +63,7 @@ void print_times_table(int n)
 			prod = r * c;
 			format_output(prod);
 		}
+		_putchar(' ');
 		_putchar('\n');
 	}
 	_putchar('\n');
