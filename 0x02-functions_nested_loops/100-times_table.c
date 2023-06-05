@@ -9,17 +9,25 @@
 
 int format_output(int prd)
 {
+	int tmp;
+
 	if (prd >= 100)
 	{
+		tmp = 0;
 		_putchar(' ');
-		_putchar(prd);
+		_putchar((prd / 100) + 48);
+		tmp = prd % 100;
+		_putchar((tmp / 10) + 48);
+		_putchar((tmp % 10) + 48);
+		tmp = 0;
 		return (0);
 	}
 	else if (prd >= 10)
 	{
 		_putchar(' ');
 		_putchar(' ');
-		_putchar(prd);
+		_putchar((prd / 10) + 48);
+		_putchar((prd % 10) + 48);
 		return (0);
 	}
 	else if (prd < 10)
@@ -27,9 +35,10 @@ int format_output(int prd)
 		_putchar(' ');
 		_putchar(' ');
 		_putchar(' ');
-		_putchar(prd);
+		_putchar(prd + 48);
 		return (0);
 	}
+	return (0);
 }
 
 /**
@@ -54,7 +63,7 @@ void print_times_table(int n)
 			prod = r * c;
 			format_output(prod);
 		}
+		_putchar('\n');
 	}
 	_putchar('\n');
-	return (0);
 }
