@@ -23,12 +23,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		len_s1++;
 	}
-	printf("%d\n",len_s1);
 	while (s2[len_s2])
 	{
 		len_s2++;
 	}
-	printf("%d\n",len_s2);
 	if (len_s2 >= n)
 		size_u = n;
 	else
