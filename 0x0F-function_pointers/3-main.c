@@ -17,13 +17,13 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	opt = get_op_func(argv[2]);
 	if (opt == NULL)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 	result = opt(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
