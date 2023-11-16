@@ -3,12 +3,12 @@
 
 /**
  * listint_len - a function that return
- * the number of the elements on a listint_t list
- * @h: listint_t passed as a argument
+ * the number of the elements on a list_t list
+ * @h: list_t passed as a argument
  * Return: size_t of counted items
  */
 
-size_t listint_len(const listint_t *h)
+size_t listint_len(const list_t *h)
 {
 	size_t i = 0;
 
