@@ -1,38 +1,49 @@
-#include <stdlib.h>
 #include "lists.h"
+#include <string.h>
 
 /**
- * add_nodeint_end - a function that add
- * a node at the end of a listint_t list
- * @head: listint_t passed as a argument
- * @n: int value to add with a new node
- * Return: size_t of counted items, NULL if failed
+ * add_node_end - Add new node at the end of a list_t.
+ * @head: Pointer to head of linked list.
+ * @str: String needs to be duplicated.
+ *
+ * Return: NULL - If the function fails.
+ * Otherwise, the address of the new element.
  */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	listint_t *nn = NULL; /*nn is the new node*/
-	listint_t *last = NULL;
+	int length;
+	list_t *nouv;
+	list_t *tail;
 
-	last = *head;
-	nn = malloc(sizeof(listint_t));
-	nn->n = n;
-	nn->next = NULL;
-	if (nn == NULL)
+	if (head == NULL || str == NULL)
 		return (NULL);
+
+	nouv = malloc(sizeof(list_t));
+	if (nouv == NULL)
+		return (NULL);
+
+	nouv->str = strdup(str);
+	if (nouv->str == NULL)
+	{
+		free(nouv);
+		return (NULL);
+	}
+
+	for (length = 0; str[length];)
+		length++;
+
+	nouv->len = length;
+	nouv->next = NULL;
+
 	if (*head == NULL)
+		*head = nouv;
+	else
 	{
-		*head = nn;
-		return (nn);
+		tail = *head;
+		while (tail->next != NULL)
+			tail = tail->next;
+		tail->next = nouv;
 	}
-	while (last)
-	{
-		if (last->next == NULL)
-		{
-			last->next = nn;
-			return (nn);
-		}
-		last = last->next;
-	}
-	return (NULL);
+
+	return (*head);
 }
